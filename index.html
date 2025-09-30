@@ -1,1 +1,191 @@
-Klimava
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Klimava – Hållbara val som lönar sig</title>
+  <meta name="description" content="Klimava uppmuntrar och belönar hållbara vanor. Samla poäng genom att leva klimatsmart och byt mot belöningar i vår poängshop." />
+  <meta property="og:title" content="Klimava – Hållbara val som lönar sig" />
+  <meta property="og:description" content="Visa dina hållbara val, samla poäng och byt mot belöningar i Klimavas poängshop." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://klimava.se" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b1220;
+      --card: #0f172a;
+      --muted: #94a3b8;
+      --text: #e2e8f0;
+      --brand: #22c55e; /* grön */
+      --brand-2: #0ea5e9; /* cyan accent */
+      --ring: rgba(34,197,94,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background: radial-gradient(1200px 800px at 10% -10%, rgba(34,197,94,.12), transparent 60%),
+                  radial-gradient(900px 600px at 110% 10%, rgba(14,165,233,.12), transparent 50%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:1100px; margin:0 auto; padding:24px}
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:36px; height:36px; display:grid; place-items:center; background:linear-gradient(135deg,var(--brand),var(--brand-2)); border-radius:10px; box-shadow:0 10px 30px rgba(14,165,233,.25)}
+    .logo svg{width:22px; height:22px; color:white}
+    .brand h1{font-size:18px; margin:0; font-weight:700}
+    nav{display:flex; gap:18px}
+    nav a{color:var(--muted)}
+    nav a:hover{color:white}
+
+    .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:36px; align-items:center; padding:48px 0}
+    .hero .title{font-size: clamp(28px, 4vw, 46px); line-height:1.1; margin:0 0 16px; font-weight:800}
+    .hero p{color:var(--muted); font-size:18px; margin:0 0 24px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border:1px solid rgba(148,163,184,.15); border-radius:18px; padding:22px; box-shadow: 0 10px 30px rgba(2,6,23,.4);}
+    .cta{display:flex; gap:12px; flex-wrap:wrap}
+    .btn{appearance:none; border:0; padding:12px 16px; border-radius:12px; font-weight:700; cursor:pointer; transition:.2s transform ease, .2s box-shadow ease}
+    .btn-primary{background:linear-gradient(135deg, var(--brand), #16a34a); color:white; box-shadow: 0 10px 24px var(--ring)}
+    .btn-primary:hover{transform: translateY(-1px)}
+    .btn-ghost{background:rgba(255,255,255,.06); color:var(--text); border:1px solid rgba(148,163,184,.2)}
+
+    .features{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+    .feature{padding:18px; border-radius:16px; background:rgba(2,6,23,.35); border:1px solid rgba(148,163,184,.12)}
+    .feature h3{margin:8px 0 8px; font-size:18px}
+    .feature p{margin:0; color:var(--muted)}
+
+    .how{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:18px}
+    .step{padding:18px; border-radius:16px; border:1px dashed rgba(148,163,184,.25); background:rgba(255,255,255,.03)}
+    .step .n{display:inline-flex; width:28px; height:28px; border-radius:9px; align-items:center; justify-content:center; background:rgba(34,197,94,.15); color:#86efac; font-weight:800; margin-bottom:8px}
+
+    .shop{margin-top:26px}
+    .shop .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .reward{padding:14px; border-radius:14px; background:rgba(2,6,23,.5); border:1px solid rgba(148,163,184,.12)}
+    .reward strong{display:block}
+
+    footer{margin-top:48px; padding:28px 0; border-top:1px solid rgba(148,163,184,.12); color:var(--muted); font-size:14px}
+    footer a{color:#a5b4fc}
+
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr;}
+      .features{grid-template-columns:1fr}
+      .how{grid-template-columns:1fr}
+      .shop .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <!-- enkel blad-ikon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 3c-6 1-10 5-11 11-1.5 1.5-3.5 2.5-6 3 5 2 10 1 13-2 3-3 4-8 4-12Z"/>
+            <path d="M8 13s1.5 2 5 3"/>
+          </svg>
+        </div>
+        <h1>Klimava</h1>
+      </div>
+      <nav>
+        <a href="#hur">Så funkar det</a>
+        <a href="#exempel">Exempel</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h2 class="title">Hållbara val som lönar sig</h2>
+        <p>Klimava är ett UF-initiativ som vill uppmuntra och belöna ett hållbart liv. Visa dina gröna val, samla poäng – och byt dem mot belöningar i vår poängshop.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#kontakt">Gå med på väntelistan</a>
+          <a class="btn btn-ghost" href="#hur">Läs mer</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Vad är Klimava?</h3>
+        <p>Klimava ger poäng när du bevisar hållbara val – som att cykla till skolan, köpa ekologisk mat, sopsortera eller dela/lagra istället för att köpa nytt. Poängen kan lösas in i vår shop.</p>
+        <div class="features" style="margin-top:14px">
+          <div class="feature">
+            <strong>Skanna kvitton</strong>
+            <p>Köp ekologiskt/fairtrade? Ladda upp kvittot och få poäng.</p>
+          </div>
+          <div class="feature">
+            <strong>Logga vanor</strong>
+            <p>Cykla, kollektivtrafik, matsvinn – få poäng för konsekvens.</p>
+          </div>
+          <div class="feature">
+            <strong>Byt i shop</strong>
+            <p>Poäng → produkter, upplevelser eller donationer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hur" class="card">
+      <h3 style="margin-top:0">Så funkar det</h3>
+      <div class="how">
+        <div class="step">
+          <div class="n">1</div>
+          <strong>Tracka dina val</strong>
+          <p>Fota kvitto, logga resor, eller välj från färdiga checklistor.</p>
+        </div>
+        <div class="step">
+          <div class="n">2</div>
+          <strong>Samla poäng</strong>
+          <p>Transparens och enkel verifiering ger en rättvis poängbild.</p>
+        </div>
+        <div class="step">
+          <div class="n">3</div>
+          <strong>Byt mot belöningar</strong>
+          <p>Använd poängen i vår shop – eller donera till klimatprojekt.</p>
+        </div>
+      </div>
+      <div class="shop">
+        <h4 style="margin:6px 0 12px">Exempel på belöningar</h4>
+        <div class="grid">
+          <div class="reward"><strong>Refill-flaska</strong><span class="muted">500 p</span></div>
+          <div class="reward"><strong>Cykelservice</strong><span class="muted">1500 p</span></div>
+          <div class="reward"><strong>Donera trädplantering</strong><span class="muted">300 p</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="exempel" class="card" style="margin-top:18px">
+      <h3 style="margin-top:0">Exempel på hållbara val</h3>
+      <ul>
+        <li>Skanna kvitto på <em>ekologiska</em> varor (grönt märke = poängboost).</li>
+        <li>Resor: cykel, till fots, kollektivtrafik (automatisk loggning planeras).</li>
+        <li>Återvinning: bildbevis + plats (återvinningsstation) → poäng.</li>
+        <li>Återbruk: sälj/by t begagnat, laga istället för att köpa nytt.</li>
+      </ul>
+      <p class="muted" style="color:var(--muted)">* Verifiering sker manuellt i starten, automatiseras över tid.</p>
+    </section>
+
+    <section id="kontakt" class="card" style="margin-top:18px">
+      <h3 style="margin-top:0">Kontakt & intresseanmälan</h3>
+      <p>Vill du vara med från start – som användare, partner eller sponsor? Hör av dig!</p>
+      <div class="cta" style="margin-top:6px">
+        <a class="btn btn-primary" href="mailto:kontakt@klimava.se?subject=Intresseanm%C3%A4lan%20Klimava&body=Hej%20Klimava!%20Jag%20vill%20g%C3%A4rna%20st%C3%A5%20p%C3%A5%20v%C3%A4ntelistan.%20%0A%0ANamn:%0AE-post:%0ARoll%20(anv%C3%A4ndare/partner/sponsor):">Skicka e‑post</a>
+        <a class="btn btn-ghost" href="https://geezmole.github.io/" target="_blank" rel="noopener">Se Github‑sidan</a>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap">
+        <span>© <span id="y"></span> Klimava UF</span>
+        <span>Integritet: Vi sparar endast uppgifter som behövs för att kunna ge poäng och belöningar. Läs mer i vår kommande policy.</span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
